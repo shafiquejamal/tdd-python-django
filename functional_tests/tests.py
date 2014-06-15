@@ -48,9 +48,9 @@ class NewVisitorTest(LiveServerTestCase):
 		inputbox.send_keys(Keys.ENTER)
 
 		# This page updates again, and now shows both items on her list
-		self.check_for_row_in_list_table('1: Buy peacock feathers')
 		self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
-
+		self.check_for_row_in_list_table('1: Buy peacock feathers')
+		
 		# Now a new user, Francis, comes along to the site.
 
 		## We use a new browser session to make sure that no information 

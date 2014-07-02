@@ -105,11 +105,6 @@ class NewVisitorTest(StaticLiveServerCase):
 		# She notices the inputbox is nicely centered
 		inputbox = self.browser.find_element_by_id('id_new_item')
 		
-		print('---- 1 ----')
-		import time
-		print(inputbox.location['x'])
-		print(inputbox.size['width'])
-		#time.sleep(5)
 		self.assertAlmostEqual(
 			inputbox.location['x'] + inputbox.size['width'] / 2, 512, delta=600
 		)
